@@ -1,0 +1,97 @@
+1.Print odd numbers of an array
+Anonymous Function:
+
+function oddNum(array1){
+             for(var i = 0 ; i< array1.length ; i++){
+                        if(array1[i]%2!=0){
+                           console.log(array1[i]);
+                        } 
+                   }
+             };
+             oddNum([77,88,101]);
+IIFE:
+
+(function(array){
+             for(var i = 0 ; i< array.length ; i++){
+                        if(array[i]%2!=0){
+                           console.log(array[i])
+                        } 
+                   }
+             })([1,2,3,5,6,7,8,9])
+
+Arrow Function:
+
+oddNum= (array) => {
+                   for(var i = 0 ; i< array.length ; i++){
+                        if(array[i]%2!=0){
+                           console.log(array[i])
+                        } 
+                   }
+                        };oddNum([1,2,3,4,5,7]);
+
+
+3. Sum of all numbers in an array 
+Anonymous Function:
+function sumNum(array1){
+             var sum = 0;
+                  for(var i = 0 ; i< array1.length ; i++){
+                     sum = sum + array1[i];
+                   }
+                   console.log(sum);
+             };
+             sumNum([77,88,101]);
+
+IIFE:
+(function(array){
+             var sum = 0;
+                  for(var i = 0 ; i< array.length ; i++){
+                     sum = sum + array[i];
+                   }
+                   //return sum;
+                   console.log(sum);
+             })([1,2,3,4])
+
+Arrow Function:
+var sumNum= (array) => {
+                     var sum = 0;
+                   for(var i = 0 ; i< array.length ; i++){
+                        sum = sum + array[i];
+                           
+                        } 
+                        console.log(sum);
+                        };
+                        sumNum([1,2,3,4]);
+
+3. Return all the prime numbers in an array
+Anonymous Function:
+
+function primeNum(numArray){
+                      numArray = numArray.filter((number) => {
+                        for (var i = 2; i <= Math.sqrt(number); i++) {
+                          if (number % i === 0) return false;
+                        }
+                        return true;
+                      });
+                      console.log(numArray);
+                  }primeNum([2,3,4,5,6,7,8,9,11]);
+IIFE:
+(function(numArray){
+                      numArray = numArray.filter((number) => {
+                        for (var i = 2; i <= Math.sqrt(number); i++) {
+                          if (number % i === 0) return false;
+                        }
+                        return true;
+                      });
+                      console.log(numArray);
+                  })([1,2,3,4,5,6,7,11]);
+Arrow Function:
+primeNum = (numArray) => {
+                      numArray = numArray.filter((number) => {
+                        for (var i = 2; i <= Math.sqrt(number); i++) {
+                          if (number % i === 0) return false;
+                        }
+                        return true;
+                      });
+                      console.log(numArray);
+                  };
+                  primeNum([1,2,3,4,5,6,7,8,9,11]);
