@@ -136,7 +136,7 @@ IIFE:
 });
 g. Remove duplicates from an array
 
-anonymous :
+Anonymous :
 var array=[1,1,2,3,4,5];
 function (array){
    let dup = [...new Set(array)];
@@ -153,7 +153,7 @@ function (array){
  (array);
 
 h.Rotate an array by k times
-anonymous :
+Anonymous :
 function (a, n, k)
 {
     k = k % n;
